@@ -1,5 +1,6 @@
 {% extends "layout/layout.html" %}
 {% block body %}
-    <ul> 
-    </ul>
+    {% for questions in questions %}
+        <a href="/question/{{questions._id}}">{{questions.title}}</a></br>
+    {% endfor %}
 {% endblock %}
